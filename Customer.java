@@ -9,8 +9,9 @@ public class Customer {
 		this.totalSum = totalSum;
 	}
 	
-	void sek(int cost) {
+	void sekAndAmount(int cost) {
 		totalSum = totalSum + cost;
+		totalAmount++;
 	}
 	
 	void amount(){

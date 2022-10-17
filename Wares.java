@@ -13,4 +13,5 @@ public class Wares {
 	void bought() {
 		amount--;
 	}
+	
 }
