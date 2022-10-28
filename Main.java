@@ -15,23 +15,24 @@ public class Main {
 		int milkAmount = 20;
 		int milkCost = 7;
 
-		double discountAmount = 0.5; // 50%
+		double discountAmount = 30; // 30%
 
 		//Wares
-		Wares fish = new Wares(fishAmount, fishCost, discountAmount);
-		Discounted melon = new Discounted(melonAmount, melonCost, discountAmount, true);
-		Wares milk = new Wares(milkAmount, milkCost, discountAmount);
+		Wares fish = new Wares(fishAmount, fishCost);
+		Discounted melon = new Discounted(melonAmount, melonCost, discountAmount);
+		Wares milk = new Wares(milkAmount, milkCost);
 		
-		melon.discounted(true);
+		melon.discounted();
 
 		//Customer
 		Customer customer = new Customer(0, 0);
+
+		System.out.println("!!! NEW (UN)LIMITED SALE ON MELONS " + (int)discountAmount +"% OFF!!!");
 
 		Scanner myScanner = new Scanner(System.in);
 
 		while (!(input == 4)) {
 
-			System.out.println("!!! NEW (UN)LIMITED SALE ON MELONS 50% OFF!!!");
 			System.out.println("1. Buy Fish, " + fish.cost + " SEK, " + fish.amount + " left!");
 			System.out.println("2. Buy Melon, " + melon.cost + " SEK, " + melon.amount + " left!");
 			System.out.println("3. Buy Milk, " + milk.cost + " SEK, " + milk.amount + " left!");

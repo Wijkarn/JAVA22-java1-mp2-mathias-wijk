@@ -1,13 +1,14 @@
 public class Discounted extends Wares{
 
 	boolean discounted;
+	double discountAmount;
 	
-	Discounted(int amount, int cost, double discountAmount, boolean discounted){
-		super(amount, cost, discountAmount);
-		this.discounted = discounted;
+	Discounted(int amount, int cost, double discountAmount){
+		super(amount, cost);
+		this.discountAmount = discountAmount;
+
 	}
-	void discounted(boolean discounted) {
-		cost = (int) (cost * discountAmount);
-		
+	void discounted() {
+		cost = (int) (cost * ((100 - discountAmount)/100 ));		
 	}
 }
